@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyProfileSeller"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:paddingStart="20dp"
+        android:layout_marginTop="40dp">
+
+        <ImageButton
+            android:id="@+id/myprofile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@null"
+            android:background="@drawable/profileicon"
+            android:src="@drawable/ic_profileicon"/>
+        <TextView
+            android:id="@+id/myprofile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jojo123"
+            android:textSize="30sp"
+            android:layout_toEndOf="@id/myprofile_image"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:includeFontPadding="false"/>
+        <TextView
+            android:id="@+id/myprofile_cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seller"
+            android:textSize="25sp"
+            android:layout_toEndOf="@id/myprofile_image"
+            android:layout_below="@id/myprofile_name"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/black"
+            android:includeFontPadding="false" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/mysales_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="My Sales"
+            android:gravity="start|center_vertical"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="13dp"
+            android:background="@drawable/button"/>
+        <Button
+            android:id="@+id/addpalay_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Add Palay"
+            android:gravity="left|center_vertical"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="13dp"
+            android:background="@drawable/buttontwo"/>
+        <Button
+            android:id="@+id/acctsettings_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Account Settings"
+            android:gravity="start|center_vertical"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="13dp"
+            android:background="@drawable/button"/>
+        <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Logout"
+            android:gravity="start|center_vertical"
+            android:textSize="25sp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="13dp"
+            android:background="@drawable/buttontwo"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="38dp">
+
+        <ImageButton
+            android:id="@+id/homebtn"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FFFFFF"
+            android:baselineAlignBottom="false"
+            app:srcCompat="@drawable/ic_homebtn" />
+        <ImageButton
+            android:id="@+id/chatbtn"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/ic_chatbtn" />
+
+        <ImageButton
+            android:id="@+id/userbtn"
+            android:layout_width="120dp"
+            android:layout_height="65dp"
+            android:scaleType="fitCenter"
+            android:layout_marginHorizontal="10dp"
+            android:backgroundTint="#FFFFFF"
+            app:srcCompat="@drawable/ic_userbtn" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
