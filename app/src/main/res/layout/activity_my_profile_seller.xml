@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,14 +15,15 @@
         android:paddingStart="20dp"
         android:layout_marginTop="40dp">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/myprofile_image"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:contentDescription="@null"
-            android:background="@drawable/profileicon"
-            android:src="@drawable/ic_profileicon"/>
+            android:src="@drawable/ic_profile"
+            android:background="@drawable/profilebg"/>
+
         <TextView
             android:id="@+id/myprofile_name"
             android:layout_width="wrap_content"
@@ -147,3 +147,4 @@
 
 
 </LinearLayout>
+
