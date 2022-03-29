@@ -139,7 +139,7 @@
             android:layout_height="65dp"
             android:scaleType="fitCenter"
             android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="@color/slimy_green"
             app:srcCompat="@drawable/ic_userbtn" />
 
     </LinearLayout>
