@@ -1,10 +1,10 @@
 package com.example.emongani;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MyProfile_Seller extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MyProfileSeller extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

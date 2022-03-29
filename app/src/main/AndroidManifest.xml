@@ -10,14 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmongANI">
         <activity
-            android:name=".MyProfile_Seller"
-            android:exported="false" />
+            android:name=".MyProfileSeller"
+            android:exported="false"
+            android:label="My Profile"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
