@@ -12,7 +12,6 @@
         <activity
             android:name=".MyProfileSeller"
             android:exported="false"
-            android:parentActivityName=".MainActivity"
             android:label="My Profile"
             />
 
