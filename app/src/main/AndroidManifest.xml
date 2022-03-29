@@ -14,7 +14,6 @@
             android:exported="false"
             android:label="My Profile"
             />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
