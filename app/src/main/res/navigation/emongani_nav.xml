@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emongani_nav"
+    app:startDestination="@id/placeholder">
+    <activity
+        android:id="@+id/myProfileSeller"
+        android:name="com.example.emongani.MyProfileSeller"
+        android:label="activity_my_profile_seller"
+        tools:layout="@layout/activity_my_profile_seller" />
+    <fragment android:id="@+id/placeholder" />
+    <fragment android:id="@+id/placeholder2" />
+</navigation>
