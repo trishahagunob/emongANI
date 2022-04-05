@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".loginActivity">
+    
+    <ImageView
+        android:id="@+id/login_applogo"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_applogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-3dp"
+        android:fontFamily="@font/nunito_sans_extrabold"
+        android:text="Login"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/login_email_address_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/input_design"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:padding="20dp"
+        android:textColor="@color/colorPrimary"></EditText>
+
+    <EditText
+        android:id="@+id/login_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email_address_input"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/input_design"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp"
+        android:textColor="@color/colorPrimary"></EditText>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/login_password_input"
+        android:layout_marginTop="5dp"
+        ></LinearLayout>
+
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/remember_me_chkb"
+        style="@style/Material.Drawable.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/nunito_sans"
+        android:gravity="center_vertical"
+        android:text="Remember me"
+        android:textColor="#5C5C5C"
+        android:textSize="16sp"
+        app:cbd_strokeColor="@color/colorPrimary"></com.rey.material.widget.CheckBox>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/remember_me_chkb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/nunito_sans_extrabold"
+        android:text="LOGIN"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"></Button>
+
+    <TextView
+        android:id="@+id/forget_password_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_sans"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="5dp"
+        android:text="Forget Password"
+        android:textColor="#4CA9FB"
+        android:layout_centerHorizontal="true"
+        ></TextView>
+
+</RelativeLayout>
