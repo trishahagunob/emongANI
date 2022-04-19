@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,13 +12,14 @@
         android:layout_height="300dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
-        android:src="@drawable/logo">
+        android:src="@drawable/logo"
+        android:contentDescription="@string/emonganilogo">
     </ImageView>
 
     <Button
         android:id="@+id/app_register_btn"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -30,28 +29,28 @@
         android:layout_marginBottom="128dp"
         android:background="@drawable/buttons"
         android:fontFamily="@font/nunito_sans_extrabold"
-        android:text="REGISTER"
+        android:text="@string/register"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
-        tools:ignore="TextContrastCheck,TouchTargetSizeCheck"></Button>
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/app_login_btn"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="127dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
         android:background="@drawable/buttons"
         android:fontFamily="@font/nunito_sans_extrabold"
-        android:text="LOGIN"
+        android:text="@string/login"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"></Button>
+        android:textSize="18sp" />
 
 </RelativeLayout>
