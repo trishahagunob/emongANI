@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.emongani">
+    package="com.example.emongani" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/emonganiicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/emonganiicon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.EmongANI">
+        android:theme="@style/Theme.EmongANI" >
         <activity
             android:name=".MySales"
             android:exported="true"
             android:label="My Sales"/>
+        <activity
+            android:name=".ChatPage"
+            android:exported="false" />
+        <activity
+            android:name=".AddPalay"
+            android:exported="true"
+            android:label="Add Palay" />
         <activity
             android:name=".MyProfileSeller"
             android:exported="true"
             android:label="My Profile" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
