@@ -14,32 +14,33 @@
         android:layout_marginTop="40dp"
         android:paddingStart="20dp"
         tools:ignore="MissingConstraints">
+
         <ImageView
-            android:id="@+id/myprofile_image"
+            android:id="@+id/profImg"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/profilebg"
             android:contentDescription="@null"
-            android:src="@drawable/ic_profile" />
+            android:src="@drawable/ic_profileicon" />
         <TextView
-            android:id="@+id/myprofile_name"
+            android:id="@+id/profName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="25dp"
-            android:layout_toEndOf="@id/myprofile_image"
+            android:layout_toEndOf="@id/profImg"
             android:includeFontPadding="false"
-            android:text="Jojo123"
+            android:text="[username]"
             android:textColor="@color/black"
             android:textSize="30sp" />
         <TextView
-            android:id="@+id/myprofile_cat"
+            android:id="@+id/profCat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/myprofile_name"
+            android:layout_below="@id/profName"
             android:layout_marginStart="12dp"
-            android:layout_toEndOf="@id/myprofile_image"
+            android:layout_toEndOf="@id/profImg"
             android:includeFontPadding="false"
             android:text="Seller"
             android:textColor="@color/black"
@@ -48,9 +49,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="549dp"
-        android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/mysales_btn"
@@ -112,18 +112,23 @@
             android:textColor="@color/white"
             android:textSize="25sp" />
     </LinearLayout>
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bottom_nav_menu" />
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
     </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomnavbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemTextColor="@drawable/bottomnav_item"
+            app:itemIconTint="@drawable/bottomnav_item"
+            app:menu="@menu/bottom_nav_menu"
+            android:layout_alignParentBottom="true"/>
+
 </LinearLayout>
 

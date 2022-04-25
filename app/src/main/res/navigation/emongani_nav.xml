@@ -3,12 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/emongani_nav"
-    app:startDestination="@id/placeholder">
+    app:startDestination="@id/myProfileSeller">
     <activity
         android:id="@+id/myProfileSeller"
         android:name="com.example.emongani.MyProfileSeller"
         android:label="activity_my_profile_seller"
         tools:layout="@layout/activity_my_profile_seller" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.emongani.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
     <fragment android:id="@+id/placeholder" />
-    <fragment android:id="@+id/placeholder2" />
 </navigation>
