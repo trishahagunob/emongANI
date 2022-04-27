@@ -1,5 +1,7 @@
 package com.example.emongani;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,26 +9,36 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.installations.Utils;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class registerActivity extends AppCompatActivity {
 
     private Button registerButton;
     private EditText InputFirstName, InputLastName, InputEmailAddress, InputMobileNumber, InputUsername, InputPassword;
     private ProgressDialog loadingBar;
+
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +54,8 @@ public class registerActivity extends AppCompatActivity {
         InputPassword = (EditText) findViewById(R.id.register_password_input);
         loadingBar = new ProgressDialog(this);
 
+        firebaseAuth = FirebaseAuth.getInstance(); //added making firebase connection 4.25.22
+
         registerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick (View view) {
@@ -50,6 +64,68 @@ public class registerActivity extends AppCompatActivity {
         });
     }
 
+    private void CreateAccount() {
+        String firstName = InputFirstName.getText().toString();
+        String lastName = InputLastName.getText().toString();
+        String emailAddress = InputEmailAddress.getText().toString();
+        String mobileNumber = InputMobileNumber.getText().toString();
+        String username = InputUsername.getText().toString();
+        String password = InputPassword.getText().toString();
+
+        if (TextUtils.isEmpty(firstName)){
+            Toast.makeText(this, "Please write your First Name", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(lastName)){
+            Toast.makeText(this, "Please write your Last Name", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(emailAddress)){
+            Toast.makeText(this, "Please write your Email Address", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(mobileNumber)){
+            Toast.makeText(this, "Please write your Mobile Number", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(username)){
+            Toast.makeText(this, "Please write your Username", Toast.LENGTH_SHORT).show();
+        }
+        else if (TextUtils.isEmpty(password)){
+            Toast.makeText(this, "Please write your Password", Toast.LENGTH_SHORT).show();
+        }
+        else{
+        // further connecting sa firebase ning sa baba 4.25.22
+        loadingBar.setTitle("Create Account");
+        loadingBar.setMessage("Please wait, while we are checking the credentials.");
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show(); //murag progress bar sa pagcreate sa account
+
+        // CONT TOMORROW: here kay mag call og method to add all these data to the firebase
+        }
+
+        firebaseAuth.createUserWithEmailAndPassword(emailAddress, password) // OG: firebaseAuth.createUserWithEmailAndPassword(InputEmailAddress.getText().toString(), InputPassword.getText().toString())
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) { // task will help us determine if successful of not
+                        if (task.isSuccessful()){
+                            Toast.makeText(registerActivity.this, "Registered successfully",
+                                    Toast.LENGTH_SHORT).show();
+
+                            loadingBar.dismiss();
+
+                            Intent intent = new Intent(registerActivity.this, MainActivity.class);
+                            startActivity(intent); // leads them back sa main page to login
+                            InputEmailAddress.setText("");
+                            InputPassword.setText("");
+
+
+                        }else{
+                            Toast.makeText(registerActivity.this, task.getException().getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
+
+    //EVERYTHING BELOW IS OLD CODE, COMMENT OUT LANG
+/*
     private void CreateAccount() {
         String firstName = InputFirstName.getText().toString();
         String lastName = InputLastName.getText().toString();
@@ -94,8 +170,11 @@ public class registerActivity extends AppCompatActivity {
 
         RootRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot Datasnapshot) {
-                if (!(Datasnapshot.child("Users").child(emailAddress).exists())){
+            public void onDataChange(@NonNull DataSnapshot snapshot ) {
+
+                String encodedEmail = Utils.encodeString(emailAddress); //suggestion ni syd
+
+                if (!(snapshot.child("Users").child(encodedEmail).exists())){ // if (!(snapshot.child("Users").child(encodedEmail).exists())){
                     HashMap<String, Object> userdataMap = new HashMap<>();
                     userdataMap.put("emailAddress", emailAddress);
                     userdataMap.put("firstName", firstName);
@@ -136,5 +215,5 @@ public class registerActivity extends AppCompatActivity {
 
             }
         });
-    }
+    } */
 }
