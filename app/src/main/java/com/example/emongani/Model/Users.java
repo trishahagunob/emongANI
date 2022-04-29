@@ -1,10 +1,10 @@
 package com.example.emongani.Model;
 
 public class Users {
-    private String emailAddress, firstName, lastName, mobileNumber, username, password;
+    private String emailAddress, firstName, lastName, mobileNumber, username, password, accountType;
 
     public Users(){
-
+        // empty constructor
     }
 
     public Users(String emailAddress, String firstName, String lastName, String mobileNumber, String username, String password) {
@@ -63,4 +63,10 @@ public class Users {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {this.accountType = accountType;}
 }
