@@ -36,7 +36,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class registerActivity extends AppCompatActivity {
-
+//hello
     private Button registerButton;
     private EditText InputFirstName, InputLastName, InputEmailAddress, InputMobileNumber, InputUsername, InputPassword;
     //private CheckBox InputSeller, InputBuyer;
