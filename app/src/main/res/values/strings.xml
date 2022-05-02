@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">emongANI</string>
+    <string name="create_new_account">Create new Account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="as_a_seller">As a Seller</string>
+    <string name="as_a_buyer">As a Buyer</string>
+    <string name="register">REGISTER</string>
+    <string name="emonganilogo">emongANIlogo</string>
+    <string name="login">LOGIN</string>
+    <string name="remember_me">Remember me</string>
+    <string name="forget_password">Forget Password</string>
 </resources>

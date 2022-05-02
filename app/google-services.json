@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "270969741631",
+    "firebase_url": "https://emonganidb-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "emonganidb",
     "storage_bucket": "emonganidb.appspot.com"
   },
@@ -19,6 +20,14 @@
           "android_info": {
             "package_name": "com.example.emongani",
             "certificate_hash": "966fc147aa0bb9aebabbe05dd0f8191055e90787"
+          }
+        },
+        {
+          "client_id": "270969741631-ndhqd895nt0vuennhti44uo50tp7ok7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emongani",
+            "certificate_hash": "a2e6610977284372e88e555ee18299be18d8f9da"
           }
         },
         {

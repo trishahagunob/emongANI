@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/nunito_sans_extrabold"
+        android:text="@string/create_new_account"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/register_first_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName|text"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/register_last_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_first_name_input"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName|text"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/register_email_address_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_last_name_input"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:autofillHints=""
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/email_address"
+        android:inputType="text|textEmailAddress"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/register_mobile_number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_email_address_input"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/mobile_number"
+        android:inputType="text|phone"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/register_username_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_mobile_number_input"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:autofillHints=""
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary" />
+
+    <EditText
+        android:id="@+id/register_password_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_username_input"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:autofillHints=""
+        android:background="@drawable/input_design2"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:hint="@string/password"
+        android:inputType="text|textPassword"
+        android:padding="15dp"
+        android:textColor="@color/colorPrimary" />
+
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/seller_chkb"
+        style="@style/Material.Drawable.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_password_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:text="@string/as_a_seller"
+        android:textColor="#5C5C5C"
+        android:textSize="16sp"
+        app:cbd_strokeColor="#9F7E69" />
+
+    <com.rey.material.widget.CheckBox
+        android:id="@+id/buyer_chkb"
+        style="@style/Material.Drawable.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seller_chkb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-15dp"
+        android:fontFamily="@font/nunito_sans_bold"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:text="@string/as_a_buyer"
+        android:textColor="#5C5C5C"
+        android:textSize="16sp"
+        app:cbd_strokeColor="#9F7E69" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="130dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/buyer_chkb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="@font/nunito_sans_extrabold"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+</RelativeLayout>
