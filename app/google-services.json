@@ -31,14 +31,6 @@
           }
         },
         {
-          "client_id": "270969741631-q281g416v4c3lck2sa6nijf9q8lo09mg.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.emongani",
-            "certificate_hash": "be8e6b5bdc4e934bf5ffb99ead15e62a4f432c58"
-          }
-        },
-        {
           "client_id": "270969741631-130jm7q5ad6254l1hmc6q7memcm6e4qt.apps.googleusercontent.com",
           "client_type": 3
         }
