@@ -1,150 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfileSeller"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="160dp"
+        android:layout_marginTop="40dp"
         android:paddingStart="20dp"
-        android:layout_marginTop="40dp">
+        tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/myprofile_image"
+            android:id="@+id/profImg"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="10dp"
+            android:background="@drawable/profilebg"
             android:contentDescription="@null"
-            android:src="@drawable/ic_profile"
-            android:background="@drawable/profilebg"/>
-
+            android:src="@drawable/ic_profileicon" />
         <TextView
-            android:id="@+id/myprofile_name"
+            android:id="@+id/profName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Jojo123"
-            android:textSize="30sp"
-            android:layout_toEndOf="@id/myprofile_image"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="25dp"
-            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/profImg"
+            android:includeFontPadding="false"
+            android:text="[username]"
             android:textColor="@color/black"
-            android:includeFontPadding="false"/>
+            android:textSize="30sp" />
         <TextView
-            android:id="@+id/myprofile_cat"
+            android:id="@+id/profCat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Seller"
-            android:textSize="25sp"
-            android:layout_toEndOf="@id/myprofile_image"
-            android:layout_below="@id/myprofile_name"
+            android:layout_below="@id/profName"
             android:layout_marginStart="12dp"
+            android:layout_toEndOf="@id/profImg"
+            android:includeFontPadding="false"
+            android:text="Seller"
             android:textColor="@color/black"
-            android:includeFontPadding="false" />
+            android:textSize="25sp" />
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <Button
             android:id="@+id/mysales_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:text="My Sales"
+            android:background="@drawable/button"
             android:gravity="start|center_vertical"
-            android:textSize="25sp"
+            android:onClick="onClickSales"
+            android:padding="13dp"
+            android:text="My Sales"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:padding="13dp"
-            android:background="@drawable/button"/>
+            android:textSize="25sp" />
+
         <Button
             android:id="@+id/addpalay_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:text="Add Palay"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/buttontwo"
             android:gravity="left|center_vertical"
-            android:textSize="25sp"
+            android:padding="13dp"
+            android:text="Add Palay"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:padding="13dp"
-            android:background="@drawable/buttontwo"/>
+            android:textSize="25sp" />
+
         <Button
             android:id="@+id/acctsettings_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:text="Account Settings"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/button"
             android:gravity="start|center_vertical"
-            android:textSize="25sp"
+            android:padding="13dp"
+            android:text="Account Settings"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:padding="13dp"
-            android:background="@drawable/button"/>
+            android:textSize="25sp" />
+
         <Button
             android:id="@+id/logout_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginTop="10dp"
-            android:text="Logout"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/buttontwo"
             android:gravity="start|center_vertical"
-            android:textSize="25sp"
+            android:padding="13dp"
+            android:text="Logout"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:padding="13dp"
-            android:background="@drawable/buttontwo"/>
-
+            android:textSize="25sp" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="38dp">
-
-        <ImageButton
-            android:id="@+id/homebtn"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:scaleType="fitCenter"
-            android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#FFFFFF"
-            android:baselineAlignBottom="false"
-            app:srcCompat="@drawable/ic_homebtn" />
-        <ImageButton
-            android:id="@+id/chatbtn"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:scaleType="fitCenter"
-            android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/ic_chatbtn" />
-
-        <ImageButton
-            android:id="@+id/userbtn"
-            android:layout_width="120dp"
-            android:layout_height="65dp"
-            android:scaleType="fitCenter"
-            android:layout_marginHorizontal="10dp"
-            android:backgroundTint="#FFFFFF"
-            app:srcCompat="@drawable/ic_userbtn" />
-
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
     </LinearLayout>
 
-
-
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomnavbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:itemTextColor="@drawable/bottomnav_item"
+            app:itemIconTint="@drawable/bottomnav_item"
+            app:menu="@menu/bottom_nav_menu"
+            android:layout_alignParentBottom="true"/>
 
 </LinearLayout>
 
